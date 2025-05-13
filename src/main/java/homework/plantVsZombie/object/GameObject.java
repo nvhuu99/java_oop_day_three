@@ -21,9 +21,9 @@ public abstract class GameObject {
     }
 
     public void takeDamage(int amount) {
+        health = amount > health ? 0 : health - amount;
         if (health > 0) {
-            health -= amount;
-            System.out.println(name + "received " + amount + " damage. Remain health: " + health);
+            System.out.println(name + " received " + amount + " damage. Remain health: " + health);
         }
     }
 
