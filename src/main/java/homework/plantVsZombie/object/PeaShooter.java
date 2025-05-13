@@ -15,9 +15,11 @@ public class PeaShooter extends GameObject implements Shooter{
     }
 
     public void shoot(GameObject target) {
-        if (target.isAlive()) {
-            target.takeDamage(this.damagePoint);
-            System.out.println(name + " shoot " + target.getName() + " with " + damagePoint + " damage");
+        if (isAlive() && target.isAlive()) {
+            if (target.getX() - x <= 5) {
+                target.takeDamage(this.damagePoint);
+                System.out.println(name + " shoot " + target.getName() + " with " + damagePoint + " damage");
+            }
         }
     }
 

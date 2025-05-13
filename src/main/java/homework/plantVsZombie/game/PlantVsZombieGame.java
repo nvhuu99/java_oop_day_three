@@ -29,11 +29,7 @@ public class PlantVsZombieGame {
     }
 
     public void start() {
-
-        boolean gameFinished = false;
-        while (!gameFinished) {
-            gameFinished = true;
-
+        while (true) {
             for (GameObject obj: objects) {
                 if (obj instanceof Shooter) {
                     handleShooterAction(obj);
@@ -42,10 +38,22 @@ public class PlantVsZombieGame {
                 }
             }
 
+            boolean plantAlive = false;
+            boolean zombieAlive = false;
             for (GameObject obj: objects) {
+                obj.update();
                 if (obj.isAlive()) {
-                    gameFinished = false;
+                    if (obj instanceof PeaShooter) {
+                        plantAlive = true;
+                    } else {
+                        zombieAlive = true;
+                    }
                 }
+            }
+
+            if (!plantAlive || !zombieAlive) {
+                System.out.println("Game finished");
+                return;
             }
         }
     }
@@ -63,9 +71,9 @@ public class PlantVsZombieGame {
         ((Mover) mover).move();
         // Zombie will kill plants immediately by moving right to left
         if (mover instanceof Zombie) {
-            for (int x = mover.getX() - 1; x >= 0; --x) {
-                if (gameMap[x][mover.getY()] != null) {
-                    gameMap[x][mover.getY()].kill();
+            for (int y = mover.getY() - 1; y >= 0; --y) {
+                if (gameMap[mover.getX()][y] != null) {
+                    gameMap[mover.getX()][y].kill();
                 }
             }
         }
