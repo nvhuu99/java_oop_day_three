@@ -17,10 +17,8 @@ public class PlantVsZombieGame {
         objects = new ArrayList<>();
 
         Random rand = new Random();
-        int pX = rand.nextInt(w);
-        int pY = rand.nextInt(h);
-        gameMap[w - 1][pY] = new Zombie("Zombie#1", w - 1, pY);
-        gameMap[pX][pY] = new PeaShooter("Plant#1", pX, pY);
+        gameMap[w - 1][0] = new Zombie("Zombie#1", w - 1, 0);
+        gameMap[0][0] = new PeaShooter("Plant#1", 0, 0);
         for (int i = 0; i < w; i++) {
             for (int j = 0; j < h; ++j) {
                 if (gameMap[i][j] != null) {
@@ -54,7 +52,7 @@ public class PlantVsZombieGame {
 
     private void handleShooterAction(GameObject shooter) {
         for (int x = shooter.getX() + 1; x < w; ++x) {
-            if (gameMap[x][shooter.getY()] != null) {
+            if (gameMap[x][shooter.getY()] != null && gameMap[x][shooter.getY()].isAlive()) {
                 ((Shooter)shooter).shoot(gameMap[x][shooter.getY()]);
             }
         }

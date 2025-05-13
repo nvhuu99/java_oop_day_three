@@ -1,16 +1,17 @@
 package homework.plantVsZombie.object;
 
 public class Zombie extends GameObject implements Mover {
-    private String name;
+    private static int BASE_HEALTH = 100;
 
     public Zombie(String name, int x, int y) {
+        health = BASE_HEALTH;
         this.name = name;
         this.x = x;
         this.y = y;
     }
 
     public void move() {
-        if (x > 0) {
+        if (isAlive() && x > 0) {
             x = x - 1;
             System.out.println(name + " move. New position (" + x + ", " + y + ")");
         }

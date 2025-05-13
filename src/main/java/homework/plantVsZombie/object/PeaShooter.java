@@ -4,7 +4,6 @@ public class PeaShooter extends GameObject implements Shooter{
     public static int BASE_DAMAGE = 20;
     public static int BASE_HEALTH = 100;
 
-    private String name;
     private int damagePoint;
 
     public PeaShooter(String name, int x, int y) {
@@ -18,7 +17,7 @@ public class PeaShooter extends GameObject implements Shooter{
     public void shoot(GameObject target) {
         if (target.isAlive()) {
             target.takeDamage(this.damagePoint);
-            System.out.println(name + " shoot " + target + " with " + damagePoint + " damage");
+            System.out.println(name + " shoot " + target.getName() + " with " + damagePoint + " damage");
         }
     }
 
