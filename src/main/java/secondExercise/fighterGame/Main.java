@@ -1,4 +1,4 @@
-package secondExercise.fighter;
+package secondExercise.fighterGame;
 
 import java.util.ArrayList;
 

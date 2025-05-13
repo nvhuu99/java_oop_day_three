@@ -1,4 +1,4 @@
-package secondExercise.fighter;
+package secondExercise.fighterGame;
 
 public class Mage extends Hero {
     public static int MAGE_BASE_DAMAGE = 2500;

@@ -38,8 +38,9 @@
   "keyToString": {
     "Application.FileManagerApp.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.homework.plantVsZombie.main.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/huu.nv/Desktop/sources/VTI/java_oop_day_three",
     "onboarding.tips.debug.path": "C:/Users/huu.nv/Desktop/sources/VTI/java_oop_day_3/src/main/java/org/example/Main.java"
@@ -47,10 +48,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="homework.plantVsZombie.object" />
       <recent name="streetFighter" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FileManagerApp">
+  <component name="RunManager" selected="Application.homework.plantVsZombie.main.Main">
     <configuration name="FileManagerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="thirdExercise.fileHandler.app.FileManagerApp" />
       <module name="java_oop_day_3" />
@@ -77,8 +79,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="homework.plantVsZombie.main.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.plantVsZombie.main.Main" />
+      <module name="java_oop_day_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework.plantVsZombie.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.homework.plantVsZombie.main.Main" />
         <item itemvalue="Application.FileManagerApp" />
         <item itemvalue="Application.Main" />
       </list>

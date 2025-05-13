@@ -1,4 +1,4 @@
-package secondExercise.fighter;
+package secondExercise.fighterGame;
 
 public abstract class Hero implements Fighter {
     public static int HERO_BASE_HEALTH_POINT = 50000;
